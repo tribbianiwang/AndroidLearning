@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.wl.androidlearning.designpattern.factory.ShapeFactory
 import com.wl.androidlearning.fragment.HomeFragment
 import com.wl.androidlearning.hilt.HiltSample
+import com.wl.androidlearning.hilt.Truck
 import com.wl.androidlearning.utils.LogUtils
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -13,9 +14,14 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var hiltSample:HiltSample
+    @Inject
+    lateinit var truck: Truck
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        truck.deliver()
 
         //工厂模式
 
