@@ -3,6 +3,7 @@ package com.wl.androidlearning
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.wl.androidlearning.designpattern.factory.ShapeFactory
+import com.wl.androidlearning.utils.LogUtils
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,5 +19,7 @@ class MainActivity : AppCompatActivity() {
         circle?.draw()
         rectangle?.draw()
         square?.draw()
+
+        LogUtils.d("mair")
     }
 }
