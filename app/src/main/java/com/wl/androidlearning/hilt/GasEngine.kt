@@ -6,7 +6,7 @@ import javax.inject.Inject
 class GasEngine @Inject constructor():Engine {
     override fun startUp() {
 
-        LogUtils.d("truck","GasEngine-startup")
+        LogUtils.d("truck","GasEngine-startup2")
 
     }
 
