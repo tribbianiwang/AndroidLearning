@@ -4,13 +4,22 @@ import com.wl.androidlearning.utils.LogUtils
 import javax.inject.Inject
 
 class Truck @Inject constructor(var driver: Driver){
-    @Inject()
-    lateinit var engine: Engine
+    @BindGasEngine
+    @Inject
+    lateinit var gasEngine: Engine
+
+    @BindElectricEngine
+    @Inject
+    lateinit var electricEngine: Engine
+
+
 
     fun deliver(){
-        engine.startUp()
+        gasEngine.startUp()
+        electricEngine.startUp()
         LogUtils.d("truck","truck is delivering$driver")
-        engine.shutDown()
+        gasEngine.shutDown()
+        electricEngine.shutDown()
     }
 
 }
