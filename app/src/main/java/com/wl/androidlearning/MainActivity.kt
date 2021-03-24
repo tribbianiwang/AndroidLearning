@@ -61,14 +61,8 @@ class MainActivity : AppCompatActivity() {
 
             val apiService = retrofit.create(ApiService::class.java)
             lifecycleScope.launch(Dispatchers.IO) {
-
-
-                val provinces = apiService.getProvinces()
-                LogUtils.d("mair","onclick-2-${Gson().toJson(provinces)}")
-
-                for (province in provinces) {
-                    println(province.name)
-                }
+                val foodTasteBeanItems = apiService.getFoodTaste()
+                LogUtils.d("mair","onclick-2-${Gson().toJson(foodTasteBeanItems)}")
             }
         }
 
