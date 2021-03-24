@@ -66,6 +66,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        bt_do_work.setOnClickListener {
+            viewModel.doWork()
+        }
+
         supportFragmentManager.beginTransaction().replace(R.id.cons_root,HomeFragment::class.java,null).commit()
     }
 }

@@ -22,4 +22,11 @@
         android:id="@+id/bt_get_province"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="doWork"
+        android:id="@+id/bt_do_work"
+        />
+
 </LinearLayout>
