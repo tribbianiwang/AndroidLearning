@@ -1,4 +1,4 @@
-package com.wl.androidlearning.hilt
+package com.wl.androidlearning.retrofit
 
 import android.util.TimeUtils
 import dagger.Module
@@ -27,7 +27,7 @@ class NetworkModule {
     fun provideRetrofit(okHttpClient: OkHttpClient):Retrofit{
 
         return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("http://192.168.0.18/")
+            .baseUrl("http://guolin.tech/")
             .client(okHttpClient)
             .build()
 
