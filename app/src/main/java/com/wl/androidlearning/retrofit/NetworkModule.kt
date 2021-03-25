@@ -1,6 +1,7 @@
 package com.wl.androidlearning.retrofit
 
 import android.util.TimeUtils
+import com.example.hiltsample.retrofit.RetrofitService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,9 +28,17 @@ class NetworkModule {
     fun provideRetrofit(okHttpClient: OkHttpClient):Retrofit{
 
         return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("http://192.168.0.18/")
+            .baseUrl("http://guolin.tech/")
             .client(okHttpClient)
             .build()
+
+    }
+
+    @Singleton
+    @Provides
+    fun provideRetrofitService(retrofit: Retrofit):RetrofitService{
+
+        return retrofit.create(RetrofitService::class.java)
 
     }
 }

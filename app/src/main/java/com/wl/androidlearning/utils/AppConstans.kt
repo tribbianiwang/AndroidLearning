@@ -1,0 +1,9 @@
+package com.wl.androidlearning.utils
+
+object AppConstans {
+
+    const val QUERYSTATUSLOADING="QUERYSTATUSLOADING"
+    const val QUERYSTATUSFAILED= "QUERYSTATUSFAILED"
+    const val QUERYSTATUSSUCCESS="QUERYSTATUSSUCCESS"
+    const val QUERYSTATUSEMPTY = "QUERYSTATUSEMPTY"
+}
