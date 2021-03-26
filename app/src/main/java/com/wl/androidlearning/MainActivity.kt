@@ -76,7 +76,8 @@ class MainActivity : AppCompatActivity() {
 
         foodTasteViewModel.apply {
             foodTastesLiveData.observe(this@MainActivity, Observer {
-                it.forEach {
+
+                it.data?.forEach {
                     LogUtils.d("testlviewmodel","taste:${it.name}")
                 }
             })
