@@ -1,8 +1,11 @@
 package com.wl.androidlearning.designpattern.factory
 
-object ShapeFactory {
+object ShapeFactory:AbstractFactory(){
+    override fun createColor(colorKey: String): Color? {
+        return null
+    }
 
-    fun createShape(shapeType:String):Shape?{
+    override fun createShape(shapeType:String):Shape?{
         when(shapeType){
             "circle"->return Circle()
             "rectangle"->return Rectangle()
