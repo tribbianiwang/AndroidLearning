@@ -11,6 +11,7 @@ import com.wl.androidlearning.designpattern.bridge.RedCircle
 import com.wl.androidlearning.designpattern.builder.MealBuilder
 import com.wl.androidlearning.designpattern.composite.Employee
 import com.wl.androidlearning.designpattern.decorator.RedShapeDectorator
+import com.wl.androidlearning.designpattern.facade.ShapeMaker
 import com.wl.androidlearning.designpattern.factory.FactoryProducer
 import com.wl.androidlearning.designpattern.factory.ShapeFactory
 import com.wl.androidlearning.designpattern.prototype.Circle
@@ -222,6 +223,10 @@ class MainActivity : AppCompatActivity() {
         redRectangleDectorator.draw()
 
 
+        //外观模式
+        ShapeMaker.drawCircle()
+        ShapeMaker.drawRectangle()
+        ShapeMaker.drawSquare()
 
 
     }
