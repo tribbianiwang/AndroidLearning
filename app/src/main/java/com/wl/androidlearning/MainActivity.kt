@@ -32,6 +32,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import javax.inject.Inject
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.random.Random
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -227,6 +228,22 @@ class MainActivity : AppCompatActivity() {
         ShapeMaker.drawCircle()
         ShapeMaker.drawRectangle()
         ShapeMaker.drawSquare()
+
+        //享元模式
+        var colors = arrayOf("yello","red","green","blue","pink","orange")
+
+
+        for(i in 1..50){
+          var circle = com.wl.androidlearning.designpattern.flyweight.Circle(colors.get(Random.nextInt(0,5)))
+            circle.radius = Random.nextInt(5,40)
+            circle.x = Random.nextInt(10,60)
+            circle.y = Random.nextInt(20,70)
+            var createCircle = com.wl.androidlearning.designpattern.flyweight.ShapeFactory.createCircle(circle)
+            createCircle.draw()
+
+        }
+
+//
 
 
     }
