@@ -10,6 +10,7 @@ import com.wl.androidlearning.designpattern.bridge.GreenCircle
 import com.wl.androidlearning.designpattern.bridge.RedCircle
 import com.wl.androidlearning.designpattern.builder.MealBuilder
 import com.wl.androidlearning.designpattern.composite.Employee
+import com.wl.androidlearning.designpattern.decorator.RedShapeDectorator
 import com.wl.androidlearning.designpattern.factory.FactoryProducer
 import com.wl.androidlearning.designpattern.factory.ShapeFactory
 import com.wl.androidlearning.designpattern.prototype.Circle
@@ -210,6 +211,16 @@ class MainActivity : AppCompatActivity() {
                 LogUtils.d("composite","name:${it}")
             }
         }
+
+        //装饰器模式
+
+        var redCircleShapeDectorator = RedShapeDectorator(com.wl.androidlearning.designpattern.decorator.Circle())
+
+        var redRectangleDectorator = RedShapeDectorator(com.wl.androidlearning.designpattern.decorator.Rectangle())
+
+        redCircleShapeDectorator.draw()
+        redRectangleDectorator.draw()
+
 
 
 
