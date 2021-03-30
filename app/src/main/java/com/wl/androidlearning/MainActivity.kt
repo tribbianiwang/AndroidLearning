@@ -18,6 +18,7 @@ import com.wl.androidlearning.designpattern.prototype.Circle
 import com.wl.androidlearning.designpattern.prototype.Rectangle
 import com.wl.androidlearning.designpattern.prototype.ShapeCache
 import com.wl.androidlearning.designpattern.prototype.Square
+import com.wl.androidlearning.designpattern.proxy.ProxyImage
 import com.wl.androidlearning.designpattern.singleton.SingleObject
 import com.wl.androidlearning.designpattern.singleton.Singleton
 import com.wl.androidlearning.designpattern.singleton.SingletonEnum
@@ -242,6 +243,10 @@ class MainActivity : AppCompatActivity() {
             createCircle.draw()
 
         }
+
+        //代理模式
+        var proxyImage = ProxyImage("英超精华")
+        proxyImage.display()
 
 //
 
